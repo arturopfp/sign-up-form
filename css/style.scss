@@ -1,0 +1,177 @@
+$red: hsl(0, 100%, 74%);
+$green: hsl(154, 59%, 51%);
+$blue: hsl(248, 32%, 49%);
+$dark_blue: hsl(249, 10%, 26%);
+$grey_blue: hsl(246, 25%, 77%);
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: $red;
+    background-image: url('../img/bg-intro-mobile.png');
+    width: 375px;
+    @media (min-width: 600px) {
+        background-image: url('../img/bg-intro-desktop.png');
+        width: 100%;
+    }
+
+    .main-container {
+        width: 85%;
+        margin: 5px 18px;
+        text-align: center;
+        padding: 5px;
+        height: 812px;
+        @media (min-width: 600px) {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 90%;
+            height: 900px;
+            margin: 10px auto;
+        }
+
+        .text {
+            margin-top: 30px;
+            @media (min-width: 600px) {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                width: 30%;
+                margin-right: 100px;
+                text-align: left;
+                height: 700px;
+            }
+
+            h1 {
+                font-size: 23px;
+                font-weight: 700;
+                color: white;
+                @media (min-width: 600px) {
+                    font-size: 45px;
+                    line-height: 1.2;
+                }
+            }
+
+            p {
+                text-align: center;
+                margin-top: 20px;
+                font-size: 13px;
+                font-weight: 400;
+                line-height: 1.7;
+                color: white;
+                @media (min-width: 600px) {
+                    font-size: 16px;
+                    text-align: left;
+                }
+            }
+        }
+
+        .sub-container {    
+            margin-top: 30px;
+            width: 100%;
+            @media (min-width: 600px) {
+                width: 850px;
+                height: 700px;
+            }
+    
+            .promotion {
+                background-color: $blue;
+                width: 100%;
+                border-radius: 7px;
+                border: none;
+                padding: 10px 50px;
+                box-shadow: 1px 14px 24px 0px rgba(0,0,0,0.75);
+                @media (min-width: 600px) {
+                    height: 80px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+    
+                a {
+                    font-size: 12px;
+                    font-weight: 300;
+                    color: white;
+                    text-decoration: none;
+                    @media (min-width: 600px) {
+                        font-size: 16px;
+                    }
+                }
+            }
+    
+            .form-container {
+                background-color: white;
+                margin-top: 30px;
+                width: 100%;
+                padding: 10px;
+                border-radius: 5px;
+                box-shadow: 1px 14px 24px 0px rgba(0,0,0,0.75);
+                @media (min-width: 600px) {
+                    height: 590px;  
+                }
+
+
+                form {
+                    margin-top: 10px;
+    
+                    input {
+                        width: 90%;
+                        height: 30px;
+                        margin-top: 15px;
+                        padding-left: 10px;
+                        font-weight: bold;
+                        @media (min-width: 600px) {
+                            height: 60px;
+                            margin-top: 25px;
+                            padding-left: 20px;
+                        }
+                    }
+    
+                    .green-button {
+                        background-color: $green;
+                        color: white;
+                        height: 45px;
+                        border-radius: 6px;
+                        border: none;
+                    }
+    
+                    .green-button::placeholder {
+                        color: $dark_blue;
+                    }
+                }
+    
+                .form-text {
+                    text-align: center;
+                    width: 200px;
+                    margin: 15px auto;
+                    @media (min-width: 600px) {
+                        width: 800px;
+                    }
+    
+                    p {
+                        font-size: 9px;
+                        font-weight: lighter;
+                        color: $dark_blue;
+                        @media (min-width: 600px) {
+                            font-size: 16px;
+                            font-weight: lighter;
+                        }
+    
+                        span {
+                            color: $red;
+                            font-weight: 800;
+                        }
+                    }
+                }
+            }
+        }
+    }  
+}
+
+
